@@ -8,8 +8,6 @@ function HW5() {
         <div>
             {/*в gh-pages лучше работает HashRouter*/}
             <HashRouter>
-                //@ts-ignore
-                <Menu/>
                 <Header/>
 
                 <Routes/>
