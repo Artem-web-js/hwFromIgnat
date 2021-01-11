@@ -1,0 +1,15 @@
+.someClass {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid lightslategrey;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.someClass h3 {
+    margin: 0 0 20px;
+    align-self: center;
+}

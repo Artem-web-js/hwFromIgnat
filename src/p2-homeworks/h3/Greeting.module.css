@@ -1,0 +1,26 @@
+.someClass {
+    margin: 0 5px 0 20px;
+}
+
+.error {
+    border: 2px solid red;
+}
+.errorText {
+    color: red;
+}
+
+.button {
+    box-sizing: border-box;
+    border: none;
+
+    padding: 5px;
+    background-color: #9cd9ac;
+    color: #3e4448;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: lightseagreen;
+    color: whitesmoke;
+}

@@ -1,0 +1,7 @@
+.activeLink {
+    color: gold;
+}
+
+.links > a {
+    margin-left: 10px;
+}
