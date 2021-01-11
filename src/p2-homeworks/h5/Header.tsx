@@ -1,15 +1,35 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, {useState} from "react";
+import {NavLink} from "react-router-dom";
 import s from "./HW5.module.css"
+import {PATH} from "./Routes";
 
 function Header() {
+    const [show, setShow] = useState(false)
+
     return (
-        <div className={s.links}>
-            <NavLink to={"/pre-junior"} activeClassName={s.activeLink}>PreJunior</NavLink>
-            <NavLink to={'/1'} activeClassName={s.activeLink}>Home Work 1</NavLink>
-            <NavLink to={'/2'} activeClassName={s.activeLink}>Home Work 2</NavLink>
-            <NavLink to={'/3'} activeClassName={s.activeLink}>Home Work 3</NavLink>
-            <NavLink to={'/4'} activeClassName={s.activeLink}>Home Work 4</NavLink>
+        <div>
+            <button className={s.showMenu}
+                    onClick={() => {setShow(!show)}}>Menu</button>
+            {show && <div className={show ? s.open : s.links} onClick={() => setShow(false)}>
+                <NavLink to={PATH.PRE_JUNIOR}
+                         className={s.link}
+                         activeClassName={s.activeLink}
+                >
+                    PreJunior
+                </NavLink>
+                <NavLink to={PATH.JUNIOR}
+                         className={s.link}
+                         activeClassName={s.activeLink}
+                >
+                    Junior
+                </NavLink>
+                <NavLink to={PATH.JUNIOR_PLUS}
+                         className={s.link}
+                         activeClassName={s.activeLink}
+                >
+                    Junior+
+                </NavLink>
+            </div>}
             {/*<NavLink to={'/6'}>Home Work 6</NavLink>*/}
         </div>
     );

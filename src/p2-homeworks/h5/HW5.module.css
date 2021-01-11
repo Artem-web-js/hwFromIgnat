@@ -1,7 +1,37 @@
+
+.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    list-style:none;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 200px;
+    background-color: #eee;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: left .5s;
+    z-index: 2;
+
+    font-size: 20px;
+}
+.links {
+    left: -200px;
+    transition: right .5s;
+}
+
+.link {
+    margin: 0 0 15px 10px;
+    text-decoration: none;
+    color: black;
+}
+
 .activeLink {
     color: gold;
 }
 
-.links > a {
-    margin-left: 10px;
+.showMenu {
+    margin-left: 80px;
 }
