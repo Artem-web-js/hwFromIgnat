@@ -7,7 +7,7 @@ function Header() {
     const [show, setShow] = useState(false)
 
     return (
-        <div>
+        <div onMouseLeave={() => {setShow(false)}}>
             <button className={s.showMenu}
                     onClick={() => {setShow(!show)}}>Menu</button>
             {show && <div className={show ? s.open : s.links} onClick={() => setShow(false)}>
